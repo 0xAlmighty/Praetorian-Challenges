@@ -6,31 +6,25 @@ base_url = "http://crypto.praetorian.com/{}"
 email = "almightysec@pm.me"
 auth_token = None
 
-# Proxy
-proxies = {
-    "http": "http://127.0.0.1:8080",
-    "https": "http://127.0.0.1:8080",
-}
-
 def get_token(email):
     global auth_token
     if not auth_token:
         url = base_url.format("api-token-auth/")
-        response = requests.post(url, data={"email": email}, proxies=proxies)
+        response = requests.post(url, data={"email": email})
         response.raise_for_status()  
         auth_token = {"Authorization": "JWT " + response.json()['token']}
     return auth_token
 
 def fetch_challenge(level):
     url = base_url.format(f"challenge/{level}/")
-    response = requests.get(url, headers=get_token(email), proxies=proxies)
+    response = requests.get(url, headers=get_token(email))
     response.raise_for_status() 
     return response.json()
 
 def solve_challenge(level, guess):
     url = base_url.format(f"challenge/{level}/")
     data = {"guess": guess}
-    response = requests.post(url, headers=get_token(email), data=data, proxies=proxies)
+    response = requests.post(url, headers=get_token(email), data=data)
     response.raise_for_status()
     return response.json()
 
