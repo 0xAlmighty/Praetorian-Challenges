@@ -24,6 +24,6 @@ The repository is organized into separate folders for each challenge, with furth
   - `/Script`
 
 - `/Mastermind` - Contains scripts for the Mastermind challenge
-  - `/Script`
+  - `mastermind.py`
 
 Happy hacking! :computer:
