@@ -7,7 +7,6 @@ This is repository contains all my solutions to the various Praetorian Challenge
 Praetorian hosts several tech challenges, each designed to test different areas of cybersecurity expertise. This repository focuses on the following challenges:
 
 - **Crypto** :key:
-- **ROTA** :cyclone:
 - **Mastermind** :brain:
 
 You should try the lab yourself before looking at the solutions: [Praetorian's Challenge Page](https://www.praetorian.com/challenges/).
@@ -20,8 +19,6 @@ The repository is organized into separate folders for each challenge, with furth
   - `/Level1`
   - `/Level2`
   - `...`
-- `/ROTA` - Contains scripts for the ROTA challenge
-  - `/Script`
 
 - `/Mastermind` - Contains scripts for the Mastermind challenge
   - `mastermind.py`
